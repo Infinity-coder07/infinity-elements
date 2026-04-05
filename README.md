@@ -1,29 +1,39 @@
 # 🧪 Elements Search
 
-A lightweight and fast web application to search detailed information about chemical elements using multiple parameters.
-
-🔗 Live Demo: https://infinity-coder07.github.io/infinity-elements/
+A fast and lightweight web app to explore detailed information about chemical elements.
 
 ---
 
 ## 🚀 Features
 
-- 🔍 Search elements by:
-  - Atomic Number
-  - Element Name
-  - Symbol
-  - Atomic Mass
+- 🔍 Search using:
+  - Atomic Number  
+  - Element Name  
+  - Symbol  
+  - Atomic Mass  
 
-- ⚡ Instant results display
-- 📱 Mobile-friendly interface
-- 🎯 Clean and minimal UI
-- 💾 Fully offline support (no API required)
+- ⚡ Instant results  
+- 📱 Mobile-friendly  
+- 💾 Works offline (no API needed)  
 
 ---
 
-## 📊 Data Provided
+## 📱 Download APK
 
-The application returns the following information for each element:
+[![Download APK](https://img.shields.io/badge/Download-APK-green?style=for-the-badge&logo=android)](https://github.com/Infinity-coder07/infinity-elements/releases)
+
+---
+
+### 📌 Installation Steps
+
+1. Download the APK from the link above  
+2. Open it on your Android device  
+3. Allow **Unknown Sources** if prompted  
+4. Install and enjoy 🚀  
+
+---
+
+## 📊 Information Provided
 
 - Atomic Number  
 - Element Name  
@@ -53,67 +63,47 @@ The application returns the following information for each element:
 
 ---
 
-## 🛠️ Tech Stack
-
-- HTML5  
-- CSS3  
-- JavaScript (Vanilla JS)  
-
----
-
 ## 📂 Project Structure
 
 ```
 Elements/
-├── index.html
-├── style.css
-├── data.js
-└── icons/
+├── index.html   # Main UI
+├── style.css    # Styling
+├── data.js      # Element data
+└── icons/       # Assets
 ```
 
----
-
-## ⚙️ How It Works
-
-1. Enter a value in the input field  
-2. Select the search type:
-   - Atomic Number  
-   - Name  
-   - Symbol  
-   - Mass  
-3. Click the corresponding button  
-4. The app searches through the dataset  
-5. Matching element details are displayed instantly  
 
 ---
 
-## ⚠️ Limitations
+## 🛠️ Tech Stack
 
-- Exact match required for some searches  
-- Data is static (stored locally in `data.js`)  
-- No fuzzy search or suggestions (yet 👀)
+- HTML  
+- CSS  
+- JavaScript  
 
 ---
 
-## 🌱 Future Improvements
+## ⚙️ How to Use
 
-- 🔎 Auto-suggestions while typing  
-- 🤖 Smart search (partial match support)  
-- 🎨 UI animations and transitions  
-- 📊 Filter by group / type  
-- 🌐 API-based dynamic data  
+1. Enter a value in the search box  
+2. Choose search type  
+3. Get instant results  
+
+---
+
+## ⚠️ Notes
+
+- Works best with exact matches  
+- Uses static local data  
+- No external API required  
 
 ---
 
 ## 👨‍💻 Developer
 
-Made  by  
-**Arko Sarkar**  
-
-🔗 Portfolio: https://infinity-coder07.github.io/arko  
+Made by **Arko Sarkar**  
 
 ---
 
-## ⭐ Support
-
-If you like this project, consider giving it a ⭐ on GitHub!
+⭐ Star this repo if you like it!
