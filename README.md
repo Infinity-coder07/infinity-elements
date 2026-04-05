@@ -18,19 +18,33 @@ A fast and lightweight web app to explore detailed information about chemical el
 
 ---
 
+
 ## 📱 Download APK
 
-[![Download APK](https://img.shields.io/badge/Download-APK-green?style=for-the-badge&logo=android)](https://github.com/Infinity-coder07/infinity-elements/releases)
+You can download the Android app from below:
+
+### 🔽 GitHub Release
+[![Download from GitHub](https://img.shields.io/badge/GitHub-Download-blue?style=for-the-badge&logo=github)](https://github.com/Infinity-coder07/infinity-elements/releases)  
+
+### ☁️ Google Drive (Backup Link)
+[![Download from Drive](https://img.shields.io/badge/Google%20Drive-Download-green?style=for-the-badge&logo=google-drive)]([https://your-google-drive-link-here](https://drive.google.com/file/d/1efYJhOM6R-DcESFchtwoRoZq4uq__PHN/view?usp=sharing))  
 
 ---
 
 ### 📌 Installation Steps
 
-1. Download the APK from the link above  
+1. Download the APK file  
 2. Open it on your Android device  
 3. Allow **Unknown Sources** if prompted  
 4. Install and enjoy 🚀  
 
+---
+
+### ⚠️ Notes
+
+- If GitHub download is slow, use the Google Drive link  
+- Make sure to download the latest version
+  
 ---
 
 ## 📊 Information Provided
