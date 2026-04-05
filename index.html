@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Infinity Elements</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="icon32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icon192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="icon512.png">
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="icon180.png">
+</head>
+<body>
+    <h1>Search Elements By</h1>
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Enter a value..." />
+    </div>
+    <div class="buttons">
+        <button onclick="search('number')">Atomic Number</button>
+        <button onclick="search('name')">Name</button>
+        <button onclick="search('symbol')">Symbol</button>
+        <button onclick="search('mass')">Mass</button>
+    </div>
+    <div class="result" id="resultBox">
+
+
+        <p><strong></strong>Atomic Number : </strong> <span id="num">N/A</span></p>
+        <p><strong></strong>Element Name : </strong> <span id="name">N/A</span></p>
+        <p><strong></strong>Symbol : </strong> <span id="symbol">N/A</span></p>
+        <p><strong></strong>Atomic Mass <span class="unit">(amu)</span> : </strong> <span id="amu">N/A</span></p>
+        <p><strong></strong>Atomic Mass<span class="unit">(Without Decimal)</span> : </strong> <span id="mass">N/A</span></p>
+        <p><strong></strong>Type : </strong> <span id="type">N/A</span></p>
+        <p><strong></strong>Group : </strong> <span id="group">N/A</span></p>
+        <p><strong></strong>Period : </strong> <span id="period">N/A</span></p>
+        <p><strong></strong>Block : </strong> <span id="block">N/A</span></p>
+        <p><strong></strong>State at STP : </strong> <span id="stp">N/A</span></p>
+        <p><strong></strong>Color : </strong> <span id="color">N/A</span></p>
+        <p><strong></strong>Electron Configuration : </strong> <span id="config">N/A</span></p>
+        <p><strong></strong>Electronegativity <span class="unit">(Pauling</span>) : </strong> <span id="pauling">N/A</span></p>
+
+        <p><strong></strong>Electron Affinity <span class="unit"></span>(eV)</span> : </strong> <span id="ev">N/A</span></p>
+        <p><strong></strong>Atomic Radius <span class="unit">(van der Waals, pm)</span> : </strong> <span id="atomrad">N/A</span></p>
+        <p><strong></strong>First Ionization Enthalpy <span class="unit">(eV)</span> : </strong> <span id="ion">N/A</span></p>
+
+        <p><strong></strong>Density <span class="unit">(g/cm³)</span> : </strong> <span id="density">N/A</span></p>
+        <p><strong></strong>Melting Point <span class="unit">(K</span>) : </strong> <span id="melting">N/A</span></p>
+        <p><strong></strong>Boiling Point <span class="unit">(K)</span> : </strong> <span id="boiling">N/A</span></p>
+        <p><strong></strong>Specific Heat <span class="unit">(J/g·K)</span> : </strong> <span id="heat">N/A</span></p>
+        <p><strong></strong>Common Oxidation States : </strong> <span id="cos">N/A</span></p>
+        
+        <p><strong></strong>Discoverer : </strong> <span id="discoverer">N/A</span></p>
+        <p><strong></strong>Year of Discovery : </strong> <span id="yod">N/A</span></p>
+        <p><strong></strong>Common Uses/Occurrences : </strong> <span id="use">N/A</span></p>
+        <p><strong></strong>Special Characteristics : </strong> <span id="sc">N/A</span></p>
+
+
+
+    </div>
+
+    <p style="text-align: right; font-size: 0.9rem; margin-top: 2rem; color: #888; width: 100%; max-width: 500px;">
+         <a href="https://infinity-coder07.github.io/Me" style="color: #888; text-decoration: none;" target="_blank">Developed by Arko</a>
+    </p>
+
+    <script>
+        async function search(type) {
+            const input = document.getElementById("searchInput").value.trim().toLowerCase();
+            const response = await fetch("elements.json");
+            const elements = await response.json();
+
+            let found = null;
+            for (const [number, data] of Object.entries(elements)) {
+                if (
+                    (type === "number" && number === input) ||
+                    (type === "name" && data.name.toLowerCase() === input) ||
+                    (type === "symbol" && data.symbol.toLowerCase() === input) ||
+                    (type === "mass" && data.mass === input)
+                ) {
+                    found = { number, ...data };
+                    break;
+                }
+            }
+
+            const fadeIn = (id, text) => {
+                const el = document.getElementById(id);
+                el.style.opacity = 0;
+                el.textContent = text;
+                setTimeout(() => (el.style.opacity = 1), 50);
+            };
+
+            if (found) {
+                fadeIn("num", found.number);
+                fadeIn("name", found.name);
+                fadeIn("symbol", found.symbol);
+                fadeIn("mass", found.mass);
+                fadeIn("config", found.config);
+                fadeIn("amu", found.amu);
+                fadeIn("group", found.group);
+                fadeIn("group", found.group);
+                fadeIn("period", found.period);
+                fadeIn("block", found.block);
+                fadeIn("stp", found.stp);
+                fadeIn("color", found.color);
+                fadeIn("pauling", found.pauling);
+                fadeIn("density", found.density);
+                fadeIn("melting", found.melting);
+                fadeIn("boiling", found.boiling);
+                fadeIn("heat", found.heat);
+                fadeIn("cos", found.cos);
+                fadeIn("type", found.type);
+                fadeIn("discoverer", found.discoverer);
+                fadeIn("yod", found.yod);
+                fadeIn("sc", found.sc);
+                fadeIn("use", found.use);
+                fadeIn("ev", found.ev);
+                fadeIn("atomrad", found.atomrad);
+                fadeIn("ion", found.ion);
+                
+
+
+
+            } else {
+                fadeIn("num", "Not Found");
+                fadeIn("name", "Not Found");
+                fadeIn("symbol", "Not Found");
+                fadeIn("mass", "Not Found");
+                fadeIn("config", "Not Found");
+                fadeIn("amu", "Not Found");
+                fadeIn("group", "Not Found");
+                fadeIn("group", "Not Found");
+                fadeIn("period", "Not Found");
+                fadeIn("block", "Not Found");
+                fadeIn("stp", "Not Found");
+                fadeIn("color", "Not Found");
+                fadeIn("pauling", "Not Found");
+                fadeIn("density", "Not Found");
+                fadeIn("melting", "Not Found");
+                fadeIn("boiling", "Not Found");
+                fadeInheat("heat", "Not Found");
+                fadeIn("cos", "Not Found");
+                fadeIn("type", "Not Found");
+                fadeIn("discoverer", "Not Found");
+                fadeIn("yod", "Not Found");
+                fadeIn("sc", "Not Found");
+                fadeIn("use", "Not Found");
+                fadeIn("ev", "Not Found");
+                fadeIn("atomrad", "Not Found");
+                fadeIn("ion", "Not Found");
+                
+            }
+        }
+    </script>
+</body>
+</html>
