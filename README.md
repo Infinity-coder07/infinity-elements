@@ -108,7 +108,7 @@ Elements/
 ## 👨‍💻 Developer
 
 Made  by  
-**Arko**  
+**Arko Sarkar**  
 
 🔗 Portfolio: https://infinity-coder07.github.io/arko  
 
