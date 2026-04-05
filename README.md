@@ -2,7 +2,7 @@
 
 A lightweight and fast web application to search detailed information about chemical elements using multiple parameters.
 
-🔗 Live Demo: https://infinity-coder07.github.io/Elements/
+🔗 Live Demo: https://infinity-coder07.github.io/infinity-elements/
 
 ---
 
