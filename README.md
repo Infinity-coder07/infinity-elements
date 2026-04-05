@@ -83,7 +83,8 @@ You can download the Android app from below:
 Elements/
 ├── index.html   # Main UI
 ├── style.css    # Styling
-└── data.js      # Element data
+├── data.js      # Element data
+└── README.md    # Documentation
 ```
 
 
